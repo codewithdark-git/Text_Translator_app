@@ -57,8 +57,8 @@ def main():
         if input_text and target_language_code:
             translated_text = translate_text(input_text, target_language_code)
             if translated_text is not None:
-                st.write(f"Translation to {target_language_name}:")
-                st.write(translated_text)
+                st.success(f"Translation to {target_language_name}:")
+                st.code(translated_text, language='python')
         else:
             st.warning("Please provide both text and select a target language.")
 
